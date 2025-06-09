@@ -1,6 +1,17 @@
 # KaraokeHunt: Karaoke video generator
 Fully automated creation of _acceptable_ karaoke music videos from any music on YouTube, using open source tools and AI (e.g. Whisper and MDX-Net)
 
+## 🚀 One-liner demo (CPU)
+
+```bash
+docker build -t karaoke-gen .
+docker run -v $PWD/output:/out karaoke-gen "https://youtu.be/dQw4w9WgXcQ"
+open output/finished.mp4
+
+Tip: Download ML checkpoints once:
+
+./scripts/download_models.sh ~/.cache/karaoke_models
+```
 [![PyPI version](https://badge.fury.io/py/karaoke-generator.svg)](https://badge.fury.io/py/karaoke-generator)
 
 ## Context
